@@ -86,7 +86,7 @@ sleep 1
 echo -e "[ ${green}INFO$NC ] Enable chrony"
 systemctl enable chrony
 systemctl restart chrony
-timedatectl set-timezone Asia/Kuala_Lumpur
+timedatectl set-timezone Asia/Jakarta
 sleep 1
 echo -e "[ ${green}INFO$NC ] Setting chrony tracking"
 chronyc sourcestats -v
@@ -405,7 +405,8 @@ After=network.target nss-lookup.target
 
 [Service]
 User=www-data
-CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE                                 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE                                 
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
 ExecStart=/usr/local/bin/xray run -config /etc/xray/config.json
 Restart=on-failure
@@ -546,7 +547,7 @@ sed -i '$ i}' /etc/nginx/conf.d/xray.conf
 
 sleep 1
 echo -e "[ ${green}INFO$NC ] Installing bbr.."
-wget -q -O /usr/bin/bbr "https://raw.githubusercontent.com/kenDevXD/multiws/main/ssh/bbr.sh"
+wget -q -O /usr/bin/bbr "https://raw.githubusercontent.com/Deadrz/MULTIPORT-WSS/main/bbr.sh"
 chmod +x /usr/bin/bbr
 bbr >/dev/null 2>&1
 rm /usr/bin/bbr >/dev/null 2>&1
