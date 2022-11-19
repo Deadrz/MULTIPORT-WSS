@@ -4,7 +4,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/SandakanVPNTrickster/permission/main/ip > /root/tmp
+    curl -sS https://raw.githubusercontent.com/Deadrz/permission/main/ip > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -20,9 +20,9 @@ BURIQ () {
     done
     rm -f  /root/tmp
 }
-# https://raw.githubusercontent.com/SandakanVPNTrickster/permission/main/ip 
+# https://raw.githubusercontent.com/Deadrz/permission/main/ip 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/SandakanVPNTrickster/permission/main/ip | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/Deadrz/permission/main/ip | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -39,7 +39,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/SandakanVPNTrickster/permission/main/ip | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/Deadrz/permission/main/ip | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -147,7 +147,7 @@ clear
 fi
 fi
 
-echo ""https://raw.githubusercontent.com/SandakanVPNTrickster/MULTIPORT-WSS/main/dependencies.sh;chmod +x dependencies.sh;./dependencies.sh
+echo ""https://raw.githubusercontent.com/Deadrz/MULTIPORT-WSS/main/dependencies.sh;chmod +x dependencies.sh;./dependencies.sh
 rm dependencies.sh
 clear
 
@@ -199,20 +199,20 @@ EOF
 echo -e "$green[INFO]$NC Install SSH & OpenVPN!"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/SandakanVPNTrickster/MULTIPORT-WSS/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/Deadrz/MULTIPORT-WSS/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #Instal Xray
 echo -e "$green[INFO]$NC Install Install XRAY!"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/SandakanVPNTrickster/MULTIPORT-WSS/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget https://raw.githubusercontent.com/Deadrz/MULTIPORT-WSS/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 clear
-wget https://raw.githubusercontent.com/SandakanVPNTrickster/MULTIPORT-WSS/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/Deadrz/MULTIPORT-WSS/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 clear
-wget https://raw.githubusercontent.com/SandakanVPNTrickster/MULTIPORT-WSS/main/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget https://raw.githubusercontent.com/Deadrz/MULTIPORT-WSS/main/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 echo -e "$green[INFO]$NC Download Extra Menu"
 sleep 2
-wget https://raw.githubusercontent.com/SandakanVPNTrickster/MULTIPORT-WSS/main/update.sh && chmod +x update.sh && ./update.sh
+wget https://raw.githubusercontent.com/Deadrz/MULTIPORT-WSS/main/update.sh && chmod +x update.sh && ./update.sh
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
@@ -239,7 +239,7 @@ if [ ! -f "/etc/log-create-user.log" ]; then
 echo "Log All Account " > /etc/log-create-user.log
 fi
 history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/SandakanVPNTrickster/MULTIPORT-WSS/main/permission/version  )
+serverV=$( curl -sS https://raw.githubusercontent.com/Deadrz/MULTIPORT-WSS/main/permission/version  )
 echo $serverV > /opt/.ver
 aureb=$(cat /home/re_otm)
 b=11
@@ -252,7 +252,7 @@ fi
 curl -sS ifconfig.me > /etc/myipvps
 
 echo " "
-echo "====================-[ SandakanVPNTrickster ]-===================="
+echo "====================-[ Deadrz ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""  | tee -a log-install.txt
@@ -290,11 +290,11 @@ echo "   - Backup & Restore Data" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> About " | tee -a log-install.txt
-echo "   - Script Presented By      : SandakanVPNTrickster" | tee -a log-install.txt
-echo "   - Contact (Only Text)      : t.me/SandakanVPNTrickster" | tee -a log-install.txt
+echo "   - Script Presented By      : Deadrz" | tee -a log-install.txt
+echo "   - Contact (Only Text)      : t.me/Deadrz" | tee -a log-install.txt
 echo "------------------------------------------------------------"
 echo ""
-echo "=============-[ SandakanVPNTrickster ]-==============="
+echo "=============-[ Deadrz ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt

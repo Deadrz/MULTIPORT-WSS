@@ -472,7 +472,7 @@ echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ip  
 }
-Isadmin=$(curl -sS https://raw.githubusercontent.com/SandakanVPNTrickster/permission | grep $MYIP | awk '{print $5}')
+Isadmin=$(curl -sS https://raw.githubusercontent.com/Deadrz/permission | grep $MYIP | awk '{print $5}')
 if [ "$Isadmin" = "OFF" ]; then
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -481,7 +481,7 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1│${NC} [INFO] Only PRO Users Can Use This Panel"
 echo -e "$COLOR1│${NC} [INFO] Buy Premium Membership : "
-echo -e "$COLOR1│${NC} [INFO] PM : t.me/SandakanVPNTrickster/"
+echo -e "$COLOR1│${NC} [INFO] PM : t.me/Deadrz/"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
 echo -e "$COLOR1│${NC}                • 𝕊𝔸ℕ𝔻𝔸𝕂𝔸ℕ 𝕍ℙℕ •                 $COLOR1│$NC"
